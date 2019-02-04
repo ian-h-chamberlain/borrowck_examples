@@ -12,10 +12,12 @@ fn example_1() {
 
     let bar = &mut foo;
 
-    // Not allowed because `bar` is already borrowing `foo`
-    let baz = &mut foo;
+    {
+        // Not allowed because `bar` is already borrowing `foo`
+        let baz = &mut foo;
 
-    *baz = 47;
+        *baz = 47;
+    }
 
     *bar += 1;
 

@@ -1,21 +1,4 @@
-#include <iostream>
-#include <string>
-
-// We have to forward declare or create a header for all these functions
-void example_1();
-void example_2();
-void example_3();
-void example_4();
-
-
-int
-main()
-{
-    example_1();
-    example_2();
-    example_3();
-    example_4();
-}
+#include "borrow.hpp"
 
 void
 example_1()

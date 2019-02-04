@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BASE_DIR=$(pwd)
-pushd $BASE_DIR
+pushd $BASE_DIR >/dev/null
 
 while [[ "$BASE_DIR" != "/" ]]; do
     BASE_DIR=$(pwd)
@@ -9,9 +9,11 @@ while [[ "$BASE_DIR" != "/" ]]; do
     cd ..
 done
 
-pushd "$BASE_DIR/build"
+mkdir -p "$BASE_DIR/build" && pushd "$BASE_DIR/build" >/dev/null
 
 g++ "$BASE_DIR/cpp_src"/*.cpp -lstdc++ -std=c++14 -o cpp_example
 
-popd
-popd
+echo "Built executable $(pwd)/cpp_example"
+
+popd >/dev/null
+popd >/dev/null

@@ -1,5 +1,5 @@
 /// Examples for borrowck_example checking in Rust
-use borrowck_example::borrow;
+mod borrow;
 
 fn main() {
     borrow::example_1();

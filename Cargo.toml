@@ -4,9 +4,5 @@ version = "0.1.0"
 authors = ["Ian Chamberlain <ichamberlain@128technology.com>"]
 edition = "2018"
 
-[lib]
-name = "borrowck_example"
-path = "src/lib.rs"
-
 [dependencies]
 serde_json = "*"

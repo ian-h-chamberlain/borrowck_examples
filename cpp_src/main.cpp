@@ -1,3 +1,4 @@
+// Examples in C++ for comparing to borrow checking in Rust
 #include "borrow.hpp"
 
 int
